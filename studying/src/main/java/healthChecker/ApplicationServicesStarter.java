@@ -37,9 +37,9 @@ public class ApplicationServicesStarter {
         }
         long startTime = System.currentTimeMillis();
 
-        System.out.println("begin to wait time");
+        System.out.println("begin to wait service startup");
         latch.await();
-        System.out.println("start services in time "+ (System.currentTimeMillis()-startTime)/1000 + "s");
+        System.out.println("start services in time "+ (System.currentTimeMillis()-startTime)/1000.0 + "s");
 
 
         for ( final BaseHealthCHecker v : services){
